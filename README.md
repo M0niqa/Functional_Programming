@@ -1,3 +1,1 @@
-School homework to practice Functional Programming. An application is a hierarchy of classes for storing information about human resources of a company, delivering functionalities (using Java 8 streams):
-preparing payroll for all the employees, preparing payroll for subordinates of the given manager, calculating the total cost of bonuses, searching for an employee with the longest seniority, searching for the highest salary without bonus (a number should be returned), searching for the highest salary with bonus (a number should be returned), searching for employees whose surnames begin with ‘A’ subordinates of the given
-manager, searching for employees who earn more than 1000 PLN.
+School homework to practice Functional Programming. The application is a hierarchy of classes for storing information about human resources of a company, delivering certain functionalities (using Java 8 streams).
