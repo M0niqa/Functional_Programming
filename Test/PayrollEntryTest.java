@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import org.junit.Assert;
 import org.junit.Test;
 
-import utp.assignment02.employee.Worker;
-import utp.assignment02.payroll.PayrollEntry;
+import assignment02.employee.Worker;
+import assignment02.payroll.PayrollEntry;
 
 public class PayrollEntryTest {
 	@Test

@@ -9,32 +9,16 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import utp.assignment02.HumanResourcesStatistics;
-import utp.assignment02.employee.Employee;
-import utp.assignment02.employee.Manager;
-import utp.assignment02.employee.Trainee;
-import utp.assignment02.employee.Worker;
-import utp.assignment02.payroll.PayrollEntry;
+import assignment02.HumanResourcesStatistics;
+import assignment02.employee.Employee;
+import assignment02.employee.Manager;
+import assignment02.employee.Trainee;
+import assignment02.employee.Worker;
+import assignment02.payroll.PayrollEntry;
 
 public class HumanResourcesStatisticsTest {
 
-	// Create a HR structure which resembles the below one:
-	//
-	// Director (an instance of Manager class (Director does not have a manager)
-	// |- Manager01
-	// |- Worker
-	// |- Worker
-	// |- Trainee
-	// |- ...
-	// |- Manager02
-	// |- ...
-	// |- ...
-	// |- Worker
-	// |- Worker
-	// |- Trainee
-
-	private List<Employee> _allEmployees; // all employees --- i.e. Workers, Trainees and their Managers and top
-											// Director (also an instance of Manager class)
+	private List<Employee> _allEmployees;
 	private List<Employee> subordinates1;
 	private List<Employee> subordinates2;
 	private List<Employee> subordinates3;
@@ -106,11 +90,11 @@ public class HumanResourcesStatisticsTest {
 
 		director = new Manager("Monika", "Potocka", LocalDate.of(1970, 2, 13), BigDecimal.valueOf(2000), null,
 				LocalDate.of(2010, 12, 8), BigDecimal.valueOf(400), null);
-		manager1 = new Manager("Łukasz", "Debski", LocalDate.of(1980, 12, 8), BigDecimal.valueOf(1200), director,
+		manager1 = new Manager("Łukasz", "Darski", LocalDate.of(1980, 12, 8), BigDecimal.valueOf(1200), director,
 				LocalDate.of(2015, 12, 8), BigDecimal.valueOf(200), subordinates1);
-		manager2 = new Manager("Sabina", "Kolodziej", LocalDate.of(1981, 3, 1), BigDecimal.valueOf(1300), director,
+		manager2 = new Manager("Sabina", "Kolodziejcyk", LocalDate.of(1981, 3, 1), BigDecimal.valueOf(1300), director,
 				LocalDate.of(2014, 12, 8), BigDecimal.valueOf(250), subordinates2);
-		manager3 = new Manager("Joanna", "Zmarz", LocalDate.of(1982, 6, 6), BigDecimal.valueOf(1200), director,
+		manager3 = new Manager("Joanna", "Zmark", LocalDate.of(1982, 6, 6), BigDecimal.valueOf(1200), director,
 				LocalDate.of(2016, 12, 8), BigDecimal.valueOf(250), subordinates3);
 
 		managersAndSubordinates = Arrays.asList(manager1, manager2, manager3, worker10, worker11);
@@ -133,9 +117,6 @@ public class HumanResourcesStatisticsTest {
 
 	@Test
 	public void shouldReturnAllSubordinates() {
-//		  Łukasz Debski, Monika Stanko, Anna Laskowska, Paulina Nowak, Agata Dela, Elena Stanek,
-//			Sabina Kolodziej, Karina Kowalska, Edmund Jawor, Jan Jackowski, Ingrid Essen, Eliza Stan, Joanna Zmarz, Marcin Jamroz,
-//			Szymon Kraska, Justyna Machala, Albert Matusiak, Joanna Kalik, Kamil Berniak
 		System.out.println(director.getAllSubordinates());
 	}
 	
@@ -219,11 +200,7 @@ public class HumanResourcesStatisticsTest {
 			
 		Assert.assertEquals(expectedList, obtainedList);
 	}
-	
-		
-	
-	
-	// (assignment 02)
+
 	
 	@Test
 	public void payroll() {
